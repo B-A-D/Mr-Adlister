@@ -1,5 +1,9 @@
 package controllers;
 
+import Dao.DaoFactory;
+import org.mindrot.jbcrypt.BCrypt;
+import models.User;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,23 +16,33 @@ public class RegisterServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException,
             IOException {
         request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
-
     }
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
             IOException {
+
         String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        String passwordConfrmation = request.getParameter("confirm_password");
+
+        String passwordConfirmation = request.getParameter("confirm_password");
 
 
         //validate input
-        boolean InputHasErrors = username.isEmpty()
+        boolean InputHasErrors =
+                username.isEmpty()
                 || email.isEmpty()
-                || password.isEmpty()
-                || (!password.equals(passwordConfrmation));
-        if(InputHasErrors) response.sendRedirect("/login");
+                || password.isEmpty();
+        if(InputHasErrors) {
+            response.sendRedirect("/register");
+            return;
+        }
+        int numberOfRounds = 12;
+        String hash = BCrypt.hashpw(password, BCrypt.gensalt(numberOfRounds));
+
+        User user = new User(username, hash, email);
+        DaoFactory.getUsersDao().insert(user);
+        response.sendRedirect("/login");
     }
 }
