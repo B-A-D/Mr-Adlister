@@ -1,4 +1,4 @@
-package src.main.java.controllers;
+package controllers;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

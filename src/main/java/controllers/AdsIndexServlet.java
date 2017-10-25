@@ -1,6 +1,6 @@
-package src.main.java.controllers;
+package controllers;
 
-import com.codeup.adlister.dao.DaoFactory;
+import Dao.DaoFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

@@ -1,4 +1,4 @@
-package src.main.java.controllers;
+package controllers;
 
 
 import javax.servlet.ServletException;
