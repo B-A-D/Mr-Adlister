@@ -1,6 +1,6 @@
-package src.main.java.Dao;
+package Dao;
 
-import src.main.java.models.User;
+import models.User;
 
 public interface Users {
     User findbyUsername (String username);

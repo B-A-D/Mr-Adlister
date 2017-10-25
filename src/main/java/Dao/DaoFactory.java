@@ -1,6 +1,4 @@
-package src.main.java.Dao;
-
-import src.main.Config;
+package Dao;
 
 public class DaoFactory {
     private static Ads adsDao;
