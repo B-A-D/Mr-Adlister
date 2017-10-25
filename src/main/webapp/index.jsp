@@ -8,9 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <jsp:include page="/WEB-INF/partials/head.jsp">
+        <jsp:param name="title" value="Mr. Adlister" />
+    </jsp:include>
 </head>
 <body>
-
+<div class="container">
+    <h1>Welcome to Mr. Adlister</h1>
+</div>
+</div>
 </body>
 </html>
