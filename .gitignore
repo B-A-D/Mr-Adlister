@@ -1,3 +1,3 @@
 .idea
 *.iml
-**/Config.java
+src/main/java/Dao/Config.java

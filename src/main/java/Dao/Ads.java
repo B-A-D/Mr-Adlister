@@ -1,6 +1,6 @@
-package src.main.java.Dao;
+package Dao;
 
-import src.main.java.models.Ad;
+import models.Ad;
 
 import java.util.List;
 
