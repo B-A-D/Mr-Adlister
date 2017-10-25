@@ -1,8 +1,8 @@
-package src.main.java.controllers;
+package controllers;
 
 import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
-import src.main.java.Dao.DaoFactory;
-import src.main.java.models.User;
+import Dao.DaoFactory;
+import models.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,14 +24,14 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        User user = DaoFactory.getUserDao().findByUsername(username);
+        User user = DaoFactory.getUsersDao().findbyUsername(username);
 
         if (user == null) {
             response.sendRedirect("/login");
             return;
         }
 
-        boolean validAttempt = password.equals(user.getpassword());
+        boolean validAttempt = password.equals(user.getPassword());
 
         if (validAttempt) {
             request.getSession().setAttribute("user", user);
