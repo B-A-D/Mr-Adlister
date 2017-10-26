@@ -1,11 +1,12 @@
 package Dao;
 
 import models.Ad;
+import models.User;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListAdsDao implements Ads {
+public class ListAdsDao {
     private List<Ad> ads;
 
     public List<Ad> all() {
@@ -26,6 +27,18 @@ public class ListAdsDao implements Ads {
         ads.add(ad);
         return ad.getId();
     }
+
+
+    public List<Ad> showUserAds(User user) {
+        if(ads==null){
+            ads=generateAds();
+        }
+        Ad ad=new Ad();
+        ad.setId(user.getId());
+        ads.add(ad);
+        return null;
+    }
+    //Above code (showUserAds) might not work, changed only because I added an interface in Ads.
 
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();

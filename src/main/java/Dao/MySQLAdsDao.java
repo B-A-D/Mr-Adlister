@@ -3,6 +3,8 @@ package Dao;
 
 import com.mysql.cj.jdbc.Driver;
 import models.Ad;
+import models.User;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +34,20 @@ public class MySQLAdsDao implements Ads {
             return createAdsFromResults(rs);
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving all ads.", e);
+        }
+    }
+
+    @Override
+    public List<Ad> showUserAds(String username) {
+        PreparedStatement stmt=null;
+        String query="select * from ads join users on users.id=ads.user_id and users.username=?";
+        try {
+            stmt=connection.prepareStatement(query);
+            stmt.setString(1, username);
+            ResultSet rs=stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
     }
 

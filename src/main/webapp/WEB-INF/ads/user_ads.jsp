@@ -10,19 +10,17 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Viewing All Ads From ${sessionScope.user}" />
+        <jsp:param name="title" value="Viewing user Ads" />
     </jsp:include>
 </head>
 <body>
 <div class="container">
-    <h1>Here are all your ads!</h1>
+    <h1>Here are all your ads ${sessionScope.user.username}</h1>
     <c:forEach var="ad" items="${ads}">
-        <c:if test="${ad.id}">
         <div class="col-md-3">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
         </div>
-        </c:if>
     </c:forEach>
 
 </div>
