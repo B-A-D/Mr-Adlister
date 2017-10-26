@@ -31,6 +31,8 @@ public class RegisterServlet extends HttpServlet {
 
         if (DaoFactory.getUsersDao().findbyUsername(username) != null) {
             request.setAttribute("error", username + " is already taken! Please try another username.");
+            request.setAttribute("username", username);
+            request.setAttribute("email", email);
             request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
             return;
         }
