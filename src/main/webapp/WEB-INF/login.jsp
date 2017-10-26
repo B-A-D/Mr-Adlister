@@ -22,6 +22,6 @@
     </form>
 </div>
 <h1 class="signup">Not a Member? Sign Up!</h1>
-<button type="button" class="btn btn-Success btn-lg center-block">Register</button>
+<button type="button" class="btn btn-Success btn-lg center-block"><a href="/register"> Register</a></button>
 </body>
 </html>

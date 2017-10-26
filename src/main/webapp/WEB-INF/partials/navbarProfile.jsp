@@ -12,7 +12,9 @@
         </form>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="/logout">Logout</a></li>
-            <li><a href="/listed">All Ads</a></li>
+            <li><a href="/ads">All Ads</a></li>
+            <li><a href="ads/create">Create an ad</a></li>
+            <li><a href="ads/about">About Us</a></li>
         </ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
