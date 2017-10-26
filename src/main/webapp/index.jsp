@@ -14,7 +14,8 @@
 </head>
 <body>
 <div class="container">
-    <h1>Welcome to Mr. Bones' Wild Ride! d|:^()</h1>
+    <h2>WELCOME TO THE DAB-LISTER</h2>
+    <iframe src="https://giphy.com/embed/eOOcHWaaJnTwc" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dab-dabbing-on-em-eOOcHWaaJnTwc"></a></p>
 </div>
 </div>
 </body>
