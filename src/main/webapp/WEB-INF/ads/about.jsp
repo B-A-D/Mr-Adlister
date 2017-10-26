@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -8,6 +7,6 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbarAbout.jsp"/>
-
+<h1>Hello</h1>
 </body>
 </html>
