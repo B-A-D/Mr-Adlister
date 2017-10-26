@@ -10,15 +10,15 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="container">
     <h1>Please fill in your information</h1>
-    <c:if test = "${error != null}">
-        <p class="error">
-        ${error}
-        </p>
-    </c:if>
     <form action="/register" method="post">
         <div class="form-group">
             <label for="username">Username</label>
             <input id="username" name="username" class="form-control">
+            <c:if test = "${error != null}">
+                <p class="error">
+                        ${error}
+                </p>
+            </c:if>
             <c:if test = "${Errors.containsKey('username')}">
                 <p class="error"> ${Errors.get('username')}</p>
             </c:if>
@@ -40,8 +40,8 @@
         <div class="form-group">
             <label for="confirm_password">Confirm Password</label>
             <input id="confirm_password" name="confirm_password" class="form-control" type="password">
-            <c:if test = "${Errors.containsKey('confirm_password')}">
-                <p class="error"> ${Errors.get('confirm_password')}</p>
+            <c:if test = "${Errors.containsKey('password_confirm')}">
+                <p class="error"> ${Errors.get('password_confirm')}</p>
             </c:if>
         </div>
         <input type="submit" class="btn btn-primary btn-block">

@@ -30,7 +30,7 @@ public class RegisterServlet extends HttpServlet {
 
 
         if (DaoFactory.getUsersDao().findbyUsername(username) != null) {
-            request.setAttribute("error", username + "is already taken! Please try another");
+            request.setAttribute("error", username + " is already taken! Please try another username.");
             request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
             return;
         }
@@ -57,9 +57,10 @@ public class RegisterServlet extends HttpServlet {
         }
 
         request.setAttribute("Errors", Errors);
-//        request.setAttribute("username", username);
-//        request.setAttribute("email", email);
+
         if (InputHasErrors) {
+//            request.setAttribute("username", username);
+//            request.setAttribute("email", email);
             request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
             return;
         }
