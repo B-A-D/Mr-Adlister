@@ -9,6 +9,7 @@ public interface Ads {
     List<Ad> all ();
     Long insert (Ad ad);
     List<Ad> showUserAds (String username);
+    List<Ad> search (String searchTerm);
 
 
 }

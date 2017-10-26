@@ -4,7 +4,8 @@
             <a class="navbar-brand" href="/ads">Adlister</a>
         </div>
         <!--navbar search-->
-        <form class="navbar-form navbar-left" role="search">
+        <form class="navbar-form navbar-left" role="search" method="get"
+        <a href="/ads/search"></a>>
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Search">
             </div>
