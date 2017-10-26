@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>Welcome to Mr. Adlister</h1>
+    <h1>Welcome to Mr. Bones' Wild Ride! d|:^()</h1>
 </div>
 </div>
 </body>
