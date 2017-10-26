@@ -45,9 +45,13 @@ public class RegisterServlet extends HttpServlet {
         HashMap<String, String> Errors = new HashMap<>();
         if (username.isEmpty()) {
             Errors.put("username", "Username field cannot be empty!");
+        }else{
+            request.setAttribute("username", username);
         }
         if (email.isEmpty()) {
             Errors.put("email", "Email field cannot be empty!");
+        }else{
+            request.setAttribute("email", email);
         }
         if (password.isEmpty()) {
             Errors.put("password", "Password field cannot be empty!");
@@ -59,11 +63,10 @@ public class RegisterServlet extends HttpServlet {
         request.setAttribute("Errors", Errors);
 
         if (InputHasErrors) {
-//            request.setAttribute("username", username);
-//            request.setAttribute("email", email);
             request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
             return;
         }
+
         int numberOfRounds = 12;
         String hash = BCrypt.hashpw(password, BCrypt.gensalt(numberOfRounds));
 

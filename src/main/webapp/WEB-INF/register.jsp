@@ -14,7 +14,7 @@
     <form action="/register" method="post">
         <div class="form-group">
             <label for="username">Username</label>
-            <input id="username" name="username" class="form-control">
+            <input id="username" name="username" class="form-control" value="${username}">
             <c:if test = "${error != null}">
                 <p class="error">
                         ${error}
@@ -26,7 +26,7 @@
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input id="email" name="email" class="form-control">
+            <input id="email" name="email" class="form-control" value="${email}">
             <c:if test = "${Errors.containsKey('email')}">
                 <p class="error"> ${Errors.get('email')}</p>
             </c:if>
