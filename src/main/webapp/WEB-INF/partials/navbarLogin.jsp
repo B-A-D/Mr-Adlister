@@ -14,7 +14,7 @@
         <!-- Brand and toggle get grouped for better mobile display -->
 
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="../ads/about.jsp">About Us</a></li>
+            <li><a href="/about">About Us</a></li>
         </ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

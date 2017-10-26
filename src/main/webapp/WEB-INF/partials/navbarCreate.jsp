@@ -7,7 +7,7 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="/profile">Profile</a></li>
-            <li><a href="../ads/about.jsp">About Us</a></li>
+            <li><a href="/about">About Us</a></li>
             <li><a href="/ads">View Ads</a></li>
             <li><a href="/logout">Logout</a></li>
         </ul>
