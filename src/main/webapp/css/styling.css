@@ -1,7 +1,10 @@
 .container {
     background-color: lightblue;
 }
-h1{
-
+ .error{
+     color:red;
+ }
+.signup{
+    color:lightgrey;
+    text-align: center;
 }
-
