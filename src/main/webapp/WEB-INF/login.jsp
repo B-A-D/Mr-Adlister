@@ -4,15 +4,6 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Please Log In" />
     </jsp:include>
-
-    <Style>
-    body {
-    background-color: lightgrey;
-    }
-    h1:hover {
-      text-transform: uppercase ;
-    }
-    </Style>
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
