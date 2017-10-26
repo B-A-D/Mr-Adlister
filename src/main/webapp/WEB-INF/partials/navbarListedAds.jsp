@@ -9,6 +9,18 @@
                 <input name="search" id="search" type="text" class="form-control" placeholder="Search Ads">
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
+            <!-- Single button -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Choose A Category <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Weak Dabs</a></li>
+                    <li><a href="#">Basic Dabs</a></li>
+                    <li><a href="#">Fire Dabs</a></li>
+                    <li><a href="#">God Dabs</a></li>
+                </ul>
+            </div>
         </form>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="/profile">Profile</a></li>

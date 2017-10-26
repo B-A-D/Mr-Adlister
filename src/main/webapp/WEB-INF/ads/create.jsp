@@ -14,13 +14,13 @@
             <label for="title">Title</label>
             <input id="title" name="title" class="form-control" type="text">
         </div>
+        <label for="title">Choose a category</label>
         <select class="form-control">
-            <label for="title">Choose a category</label>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+
+            <option>Weak Dabs</option>
+            <option>Basic Dabs</option>
+            <option>Fire Dabs</option>
+            <option>God Dabs</option>
         </select>
 
         <div class="form-group">
