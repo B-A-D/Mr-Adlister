@@ -14,8 +14,9 @@
             <label for="title">Title</label>
             <input id="title" name="title" class="form-control" type="text">
         </div>
-        <label for="title">Choose a category</label>
-        <select class="form-control">
+        <label for="category">Choose a category</label>
+        <select id="category" name="category" class="form-control">
+
             <option>Weak Dabs</option>
             <option>Basic Dabs</option>
             <option>Fire Dabs</option>
