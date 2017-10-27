@@ -3,21 +3,21 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Viewing All The Ads" />
+        <jsp:param name="title" value="Ads" />
     </jsp:include>
 </head>
 <body>
+
+
 <jsp:include page="/WEB-INF/partials/navbarListedAds.jsp" />
 <div class="container">
-    <h1>Here are all the ads!</h1>
-    <c:forEach var="ad" items="${ads}">
-    <div class="col-md-3">
-        <a href="/ads/id?id=${ad.id}"><h2>${ad.title}</h2></a>
-        <p>${ad.description}</p>
-    </div>
-    </c:forEach>
-
+    <%--<c:forEach var="ad" items="${ads}">--%>
+        <%--<c:when test="${ad.id} eq <%= request.getParameter("id") %>">--%>
+    <h1>${ad.title}</h1>
+    <p>${ad.description}</p>
+    <p>${ad.date_time}</p>
+    <%--</c:when>--%>
+    <%--</c:forEach>--%>
 </div>
-
 </body>
 </html>
