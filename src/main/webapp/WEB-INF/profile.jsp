@@ -3,27 +3,30 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Your Profile" />
+        <jsp:param name="title" value="Your Profile"/>
     </jsp:include>
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/navbarProfile.jsp" />
+<jsp:include page="/WEB-INF/partials/navbarProfile.jsp"/>
 
 <div class="container">
-    <h1>Welcome ${sessionScope.user.username}, here are all your currently listed Ads!</h1>
-
-    <c:forEach var="ad" items="${ads}">
-        <div class="col-md-3 ads">
-            <a href="/ads/id?id=${ad.id}"><h2>${ad.title}</h2></a>
-            <%--Replace the '#' with the servlet link to search based on id.--%>
-            <h3>${ad.title}</h3>
-            <p>${ad.description}</p>
-            <a href="/delete?id=${ad.id}">
-                Delete Ad
-            </a>
+    <div class="main-display">
+        <h1>Welcome ${sessionScope.user.username}, here are all your currently listed Ads!</h1>
+        <div class="row">
+            <c:forEach var="ad" items="${ads}">
+                <div class="col-md-3">
+                    <div class="ads">
+                        <a href="/ads/id?id=${ad.id}"><h2>${ad.title}</h2></a>
+                            <%--Replace the '#' with the servlet link to search based on id.--%>
+                        <p>${ad.description}</p>
+                        <a href="/delete?id=${ad.id}">
+                            Delete Ad
+                        </a>
+                    </div>
+                </div>
+            </c:forEach>
         </div>
-    </c:forEach>
-
+    </div>
 </div>
 </body>
 </html>
