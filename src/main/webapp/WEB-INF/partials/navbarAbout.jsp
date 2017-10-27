@@ -21,7 +21,7 @@
             <li><a href="/login">Login</a></li>
             <li><a href="/logout">Register</a></li>
             <li><a href="/login">Profile</a></li>
-
+≠
         </ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
