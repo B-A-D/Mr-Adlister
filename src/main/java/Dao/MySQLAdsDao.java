@@ -3,8 +3,6 @@ package Dao;
 
 import com.mysql.cj.jdbc.Driver;
 import models.Ad;
-import models.User;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
