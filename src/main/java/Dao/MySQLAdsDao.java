@@ -3,8 +3,6 @@ package Dao;
 
 import com.mysql.cj.jdbc.Driver;
 import models.Ad;
-import models.User;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -39,12 +37,12 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public List<Ad> showUserAds(String username) {
-        PreparedStatement stmt=null;
-        String query="select * from ads join users on users.id=ads.user_id and users.username=?";
+        PreparedStatement stmt = null;
+        String query = "select * from ads join users on users.id=ads.user_id and users.username=?";
         try {
-            stmt=connection.prepareStatement(query);
+            stmt = connection.prepareStatement(query);
             stmt.setString(1, username);
-            ResultSet rs=stmt.executeQuery();
+            ResultSet rs = stmt.executeQuery();
             return createAdsFromResults(rs);
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -80,7 +78,6 @@ public class MySQLAdsDao implements Ads {
         );
     }
 
-
     private List<Ad> createAdsFromResults(ResultSet rs) throws SQLException {
         List<Ad> ads = new ArrayList<>();
         while (rs.next()) {
@@ -89,7 +86,7 @@ public class MySQLAdsDao implements Ads {
         return ads;
     }
 
-    public List<Ad> search (String searchTerm)  {
+    public List<Ad> search(String searchTerm) {
         try {
             PreparedStatement stmt = null;
             String query = "Select * from ads WHERE title LIKE ? OR description LIKE ?";
@@ -118,6 +115,18 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("There was an error displaying this ad",e);
         }
 
+    }
+
+    public void delete(long id) {
+        PreparedStatement stmt = null;
+        String query = "DELETE FROM ADS WHERE id = ?";
+        try {
+            stmt = connection.prepareStatement(query);
+            stmt.setLong(1, id);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+          throw new RuntimeException(e);
+        }
     }
 }
 

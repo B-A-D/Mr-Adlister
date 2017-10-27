@@ -20,7 +20,6 @@
         <div class="col-md-3">
             <a href="/ads/id?id=${ad.id}">${ad.title}</a>
             <p>${ad.description}</p>
-
         </div>
     </c:forEach>
 

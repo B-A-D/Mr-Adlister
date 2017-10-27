@@ -11,6 +11,7 @@ public interface Ads {
     List<Ad> showUserAds (String username);
     List<Ad> search (String searchTerm);
     Ad showSpecificById(Long id);
+    void delete (long id);
 
 
 }
