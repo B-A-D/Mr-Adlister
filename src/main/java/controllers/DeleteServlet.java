@@ -20,8 +20,4 @@ public class DeleteServlet extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF//login.jsp").forward(request, response);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
-    }
-
 }
