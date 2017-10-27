@@ -16,7 +16,6 @@
         </div>
         <label for="title">Choose a category</label>
         <select class="form-control">
-
             <option>Weak Dabs</option>
             <option>Basic Dabs</option>
             <option>Fire Dabs</option>

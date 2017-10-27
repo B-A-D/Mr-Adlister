@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/ads">Adlister</a>
+            <a class="navbar-brand" href="/index.jsp">DabLister</a>
         </div>
         <!--navbar search-->
         <form class="navbar-form navbar-left" role="search" method="get"

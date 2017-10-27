@@ -15,7 +15,7 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbarRegister.jsp"/>
 <div class="container">
-    <h2>WELCOME TO THE DAB-LISTER</h2>
+    <h2> WELCOME TO THE DAB-LISTER</h2>
     <iframe src="https://giphy.com/embed/eOOcHWaaJnTwc" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dab-dabbing-on-em-eOOcHWaaJnTwc"></a></p>
 <button type="button" class="btn btn-primary btn-lg center-block"><a class="reg-sign" href="/login"> Login</a></button>
 <button type="button" class="btn btn-Success btn-lg center-block"><a class="reg-sign" href="/register"> Register</a></button>
