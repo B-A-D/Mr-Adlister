@@ -14,8 +14,11 @@
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-3 ads">
-            <h2>${ad.title}</h2>
+            <h3>${ad.title}</h3>
             <p>${ad.description}</p>
+            <a href="/delete?id=${ad.id}">
+                Delete Ad
+            </a>
         </div>
     </c:forEach>
 
