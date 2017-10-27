@@ -10,12 +10,12 @@
 <jsp:include page="/WEB-INF/partials/navbarListedAds.jsp" />
 <div class="container">
     <h1>Here are all the ads!</h1>
-    <c:forEach var="ad" items="${ads}">
     <div class="col-md-3">
+    <c:forEach var="ad" items="${ads}">
         <h3>${ad.title}</h3>
         <p>${ad.description}</p>
-    </div>
     </c:forEach>
+    </div>
 </div>
 
 </body>

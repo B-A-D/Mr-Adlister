@@ -20,6 +20,12 @@
         <div class="col-md-3">
             <h3>${ad.title}</h3>
             <p>${ad.description}</p>
+            <form action="${pageContext.request.contextPath}/Vote" method="post">
+                <input type="hidden" name="username" value="${username}">
+                <button type="submit" name="button" value="button1">Upvote</button>
+                <button type="submit" name="button" value="button2">Downvote</button>
+
+            </form>
         </div>
     </c:forEach>
 
