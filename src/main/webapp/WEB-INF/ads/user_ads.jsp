@@ -18,8 +18,9 @@
     <h1>Here are all your ads ${sessionScope.user.username}</h1>
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-3">
-            <h2>${ad.title}</h2>
+            <a href="/ads/id?id=${ad.id}">${ad.title}</a>
             <p>${ad.description}</p>
+
         </div>
     </c:forEach>
 

@@ -14,7 +14,8 @@
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-3">
-            <h2>${ad.title}</h2>
+            <a href="/ads/id?id=${ad.id}"><h2>${ad.title}</h2></a>
+            <%--Replace the '#' with the servlet link to search based on id.--%>
             <p>${ad.description}</p>
         </div>
     </c:forEach>

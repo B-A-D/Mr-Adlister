@@ -10,6 +10,7 @@ public interface Ads {
     Long insert (Ad ad);
     List<Ad> showUserAds (String username);
     List<Ad> search (String searchTerm);
+    Ad showSpecificById(Long id);
 
 
 }
