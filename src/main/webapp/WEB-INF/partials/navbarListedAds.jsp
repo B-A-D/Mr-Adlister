@@ -8,8 +8,14 @@
             <div class="form-group">
                 <input name="search" id="search" type="text" class="form-control" placeholder="Search Ads">
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            <%--<button type="submit" class="btn btn-default">Submit</button>--%>
             <!-- Single button -->
+            <form class="navbar-form navbar-left" role="search" method="get" action="/ads/user">
+                <div class="form-group">
+                    <input type="text" class="form-control"  name="username" placeholder="Search by Username">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
             <div class="btn-group">
                 <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Choose A Category <span class="caret"></span>

@@ -21,7 +21,7 @@ public class UserAdsIndexServlet extends HttpServlet {
         int votes = 0;
 //        User user= (User) request.getSession().getAttribute("user");
         String username = request.getParameter("username");
-        //User user=DaoFactory.getUsersDao().findbyUsername(username);
+//        User user=DaoFactory.getUsersDao().findbyUsername(username);
         request.setAttribute("username", username);
         request.setAttribute("ads", DaoFactory.getAdsDao().showUserAds(username));
         request.getRequestDispatcher("/WEB-INF/ads/user_ads.jsp").forward(request,response);

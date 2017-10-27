@@ -7,7 +7,13 @@
 
         <form class="navbar-form navbar-left" role="search" method="get" action="/ads/search">
             <div class="form-group">
-                <input name="search" type="text" class="form-control" placeholder="Search">
+                <input name="search" type="text" class="form-control" placeholder="Search by Ads">
+            </div>
+            <%--<button type="submit" class="btn btn-default">Submit</button>--%>
+        </form>
+        <form class="navbar-form navbar-left" role="search" method="get" action="/ads/user">
+            <div class="form-group">
+                <input type="text" class="form-control"  name="username" placeholder="Search by Username">
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
         </form>
