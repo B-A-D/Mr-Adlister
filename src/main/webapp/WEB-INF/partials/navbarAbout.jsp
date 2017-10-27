@@ -9,13 +9,19 @@
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Search">
             </div>
+            <%--<button type="submit" class="btn btn-default">Submit</button>--%>
+        </form>
+        <form class="navbar-form navbar-left" role="search" method="get" action="/ads/user">
+            <div class="form-group">
+                <input type="text" class="form-control"  name="username" placeholder="Search by Username">
+            </div>
             <button type="submit" class="btn btn-default">Submit</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="/login">Login</a></li>
             <li><a href="/logout">Register</a></li>
             <li><a href="/login">Profile</a></li>
-
+≠
         </ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

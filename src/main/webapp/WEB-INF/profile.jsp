@@ -11,7 +11,6 @@
 
 <div class="container">
     <h1>Welcome ${sessionScope.user.username}, here are all your currently listed Ads!</h1>
-
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-3 ads">
             <a href="/ads/id?id=${ad.id}"><h2>${ad.title}</h2></a>
@@ -23,7 +22,6 @@
             </a>
         </div>
     </c:forEach>
-
 </div>
 </body>
 </html>
