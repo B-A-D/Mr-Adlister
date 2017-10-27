@@ -101,6 +101,22 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
+    public List<Ad> searchByCategory(Ad ad) {
+
+        try {
+            PreparedStatement stmt=null;
+            String query="Select category from ads WHERE category LIKE ?";
+            stmt=connection.prepareStatement(query);
+            stmt.setString(1, ad.getCategory());
+            ResultSet rs=stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving ads by categories",e);
+        }
+
+    }
+
+    @Override
     public Ad showSpecificById(Long id) {
         //Will display single page based on id.
         PreparedStatement stmt=null;
