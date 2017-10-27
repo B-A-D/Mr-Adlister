@@ -1,18 +1,55 @@
+/*YOU SUCK. YES YOU!!!*/
 .container {
+    min-height: 100%;
+    text-align: center;
+}
+
+.form {
+    background-color: lightblue;
+    text-align: left;
+    padding: 10px;
+}
+
+body {
+    background-image: url("../img/main-background.jpg");
+}
+
+.main-display {
     background-color: lightblue;
     text-align: center;
+    padding: 25px 50px;
+}
 
+.custom-btn {
+    margin-top: 10px;
 }
-.container {
-    font-size: 2em;
+
+.login-btn {
+    width: 100%;
+}
+
+.register-btn {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.register-here {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.title-text {
     color: navy;
+    font-size: 4em;
 }
- .error{
+
+.error{
      color:red;
- }
+}
 
 .signup{
-    color:lightgrey;
+    color:black;
     text-align: center;
 }
 
@@ -22,5 +59,10 @@
 }
 
 .ads{
+    margin-top: 20px;
     font-size: 1em;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    width: 95%;
 }
