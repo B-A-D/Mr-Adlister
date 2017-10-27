@@ -21,7 +21,7 @@ public class SinglePageAdServlet extends HttpServlet {
         request.removeAttribute("ad");
         request.setAttribute("ad", DaoFactory.getAdsDao().showSpecificById(id));
         request.getRequestDispatcher("/WEB-INF/ads/single_ad_info_page.jsp").forward(request,response);
-        request.removeAttribute("id");
+
 
 
 

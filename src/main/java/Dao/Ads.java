@@ -10,7 +10,7 @@ public interface Ads {
     Long insert (Ad ad);
     List<Ad> showUserAds (String username);
     List<Ad> search (String searchTerm);
-    List<Ad> searchByCategory(Ad ad);
+    List<Ad> searchByCategory(String category);
     Ad showSpecificById(Long id);
     void delete (long id);
 

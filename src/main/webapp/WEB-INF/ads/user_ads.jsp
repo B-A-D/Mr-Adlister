@@ -14,6 +14,7 @@
     </jsp:include>
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/navbarListedAds.jsp"/>
 <div class="container">
     <h1>Here are all your ads ${sessionScope.user.username}</h1>
     <c:forEach var="ad" items="${ads}">
