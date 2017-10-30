@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="/index.jsp">DabLister</a>
+            <a class="navbar-brand" href="/index.jsp">DabLister
         </div>
         <form class="navbar-form navbar-left" role="search" method="get" action="/ads/search">
             <div class="form-group">

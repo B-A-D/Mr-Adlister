@@ -2,6 +2,7 @@
 .container {
     min-height: 100%;
     text-align: center;
+    color:papayawhip;
 }
 
 .form {
@@ -9,7 +10,7 @@
     text-align: left;
     padding: 10px;
     background: rgba(60, 60, 60, 0.4);
-    color:lightgrey;
+    color:papayawhip;
 }
 
 body {
@@ -24,7 +25,7 @@ body {
     text-align: center;
     padding: 25px 50px;
     background: rgba(60, 60, 60, 0.4);
-    color:lightgrey;
+    color:papayawhip;
 }
 
 .custom-btn {
