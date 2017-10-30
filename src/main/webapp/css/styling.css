@@ -5,7 +5,7 @@
 }
 
 .form {
-    background-color: lightblue;
+    background-color: lightsalmon;
     text-align: left;
     padding: 10px;
 }
@@ -15,7 +15,7 @@ body {
 }
 
 .main-display {
-    background-color: lightblue;
+    background-color: lightsalmon;
     text-align: center;
     padding: 25px 50px;
 }
@@ -26,6 +26,8 @@ body {
 
 .login-btn {
     width: 100%;
+    background-color: rebeccapurple;
+    color: white;
 }
 
 .register-btn {
@@ -40,8 +42,12 @@ body {
 }
 
 .title-text {
-    color: navy;
+    color: rebeccapurple;
     font-size: 4em;
+}
+
+.purple-text {
+    color: rebeccapurple;
 }
 
 .error{
@@ -62,6 +68,7 @@ body {
     margin-top: 20px;
     font-size: 1em;
     background-color: white;
+    color: rebeccapurple;
     padding: 10px;
     border: 1px solid black;
     width: 95%;

@@ -16,7 +16,7 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbarListedAds.jsp"/>
 <div class="container">
-    <h1>Here are all your ads ${sessionScope.user.username}</h1>
+    <h1 class="title-text">Here are all your ads ${sessionScope.user.username}</h1>
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-3">
             <a href="/ads/id?id=${ad.id}">${ad.title}</a>
