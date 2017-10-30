@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "UserAdsIndexServlet", urlPatterns="/ads/user")
-public class UserAdsIndexServlet extends HttpServlet {
+@WebServlet(name = "SearchByUsernameServlet", urlPatterns="/ads/user")
+public class SearchByUsernameServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }

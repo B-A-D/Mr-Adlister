@@ -9,21 +9,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-//Will search the database based on the specific ads id.
-@WebServlet(name = "SinglePageAdServlet", urlPatterns = "/ads/id")
-public class SinglePageAdServlet extends HttpServlet {
+@WebServlet(name = "SearchByCategoryServlet", urlPatterns = "/ads/category")
+public class SearchByCategoryServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Long id= Long.valueOf(request.getParameter("id"));
-        request.removeAttribute("ad");
-        request.setAttribute("ad", DaoFactory.getAdsDao().showSpecificById(id));
-        request.getRequestDispatcher("/WEB-INF/ads/single_ad_info_page.jsp").forward(request,response);
-
-
-
+        String category =request.getParameter("category");
+        request.setAttribute("category", category);
+        request.setAttribute("ads", DaoFactory.getAdsDao().searchByCategory(category));
+        request.getRequestDispatcher("/WEB-INF/ads/user_ads.jsp").forward(request,response);
 
 
     }

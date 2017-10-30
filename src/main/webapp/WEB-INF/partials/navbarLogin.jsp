@@ -4,21 +4,8 @@
             <a class="navbar-brand" href="/index.jsp">DabLister</a>
         </div>
         <!--navbar search-->
-        <form class="navbar-form navbar-left" role="search" method="get"
-        <a href="/ads/search"></a>>
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <%--<button type="submit" class="btn btn-default">Submit</button>--%>
-        </form>
-        <form class="navbar-form navbar-left" role="search" method="get" action="/ads/user">
-            <div class="form-group">
-                <input type="text" class="form-control"  name="username" placeholder="Search by Username">
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-        </form>
+        <jsp:include page="navSearchTemplate.jsp"/>
         <!-- Brand and toggle get grouped for better mobile display -->
-
         <ul class="nav navbar-nav navbar-right">
             <li><a href="/about">About Us</a></li>
         </ul>
