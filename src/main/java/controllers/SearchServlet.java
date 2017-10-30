@@ -1,22 +1,10 @@
-package controllers;
+@javax.servlet.annotation.WebServlet(name = "SearchServlet")
+public class SearchServlet extends javax.servlet.http.HttpServlet {
+    protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, java.io.IOException {
 
-import Dao.DaoFactory;
-import models.Ad;
+    }
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.util.List;
+    protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, java.io.IOException {
 
-@WebServlet(name = "Controllers.SearchServlet", urlPatterns = "/ads/search")
-public class SearchServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String searchTerm = request.getParameter("search");
-        List<Ad> ads = DaoFactory.getAdsDao().search(searchTerm);
-        request.setAttribute("ads", ads);
-        request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
     }
 }
