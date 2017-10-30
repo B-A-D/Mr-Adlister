@@ -8,16 +8,23 @@
     background-color: lightblue;
     text-align: left;
     padding: 10px;
+    background: rgba(60, 60, 60, 0.4);
+    color:lightgrey;
 }
 
 body {
-    background-image: url("../img/main-background.jpg");
+    background-image: url("../img/sunset2.jpg");
+    background-repeat: no-repeat;
+    background-color: rebeccapurple;
+
 }
 
 .main-display {
     background-color: lightblue;
     text-align: center;
     padding: 25px 50px;
+    background: rgba(60, 60, 60, 0.4);
+    color:lightgrey;
 }
 
 .custom-btn {
@@ -34,13 +41,14 @@ body {
 }
 
 .register-here {
-    background-color: white;
+    /*background-color: white;*/
+    background: rgba(60, 60, 60, 0.4);
     padding: 10px;
     text-align: center;
 }
 
 .title-text {
-    color: navy;
+    color: papayawhip;
     font-size: 4em;
 }
 
@@ -49,7 +57,7 @@ body {
 }
 
 .signup{
-    color:black;
+    color:papayawhip;
     text-align: center;
 }
 
@@ -61,7 +69,7 @@ body {
 .ads {
     margin-top: 20px;
     font-size: 1em;
-    background-color: white;
+    background-color: goldenrod;
     padding: 10px;
     border: 1px solid black;
     width: 95%;
@@ -76,4 +84,8 @@ body {
     text-align: center;
     color:rebeccapurple;
     line-height:1em;
+}
+.footer{
+    text-align: center;
+    color: lightgrey;
 }
