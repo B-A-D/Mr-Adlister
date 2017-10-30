@@ -23,4 +23,7 @@
 </div>
 </div>
 </body>
+<footer>
+    <div class="footer"><p> All rights reserved by B-A-D productions <span class="glyphicon glyphicon-thumbs-up"></span></p></div>
+</footer>
 </html>

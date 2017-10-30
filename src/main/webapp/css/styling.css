@@ -2,22 +2,31 @@
 .container {
     min-height: 100%;
     text-align: center;
+    color:papayawhip;
 }
 
 .form {
-    background-color: lightsalmon;
+    background-color: lightblue;
     text-align: left;
     padding: 10px;
+    background: rgba(60, 60, 60, 0.4);
+    color:papayawhip;
 }
 
 body {
-    background-image: url("../img/main-background.jpg");
+    background-image: url("../img/sunset2.jpg");
+    background-repeat: no-repeat;
+    background-color: rebeccapurple;
+    background-size: 100% 100%;
+
 }
 
 .main-display {
-    background-color: lightsalmon;
+    background-color: lightblue;
     text-align: center;
     padding: 25px 50px;
+    background: rgba(60, 60, 60, 0.4);
+    color:papayawhip;
 }
 
 .custom-btn {
@@ -26,8 +35,6 @@ body {
 
 .login-btn {
     width: 100%;
-    background-color: rebeccapurple;
-    color: white;
 }
 
 .register-btn {
@@ -36,18 +43,15 @@ body {
 }
 
 .register-here {
-    background-color: white;
+    /*background-color: white;*/
+    background: rgba(60, 60, 60, 0.4);
     padding: 10px;
     text-align: center;
 }
 
 .title-text {
-    color: rebeccapurple;
+    color: papayawhip;
     font-size: 4em;
-}
-
-.purple-text {
-    color: rebeccapurple;
 }
 
 .error{
@@ -55,7 +59,7 @@ body {
 }
 
 .signup{
-    color:black;
+    color:papayawhip;
     text-align: center;
 }
 
@@ -67,8 +71,7 @@ body {
 .ads {
     margin-top: 20px;
     font-size: 1em;
-    background-color: white;
-    color: rebeccapurple;
+    background-color: goldenrod;
     padding: 10px;
     border: 1px solid black;
     width: 95%;
@@ -83,4 +86,8 @@ body {
     text-align: center;
     color:rebeccapurple;
     line-height:1em;
+}
+.footer{
+    text-align: center;
+    color: lightgrey;
 }

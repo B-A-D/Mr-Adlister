@@ -3,9 +3,8 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <a class="navbar-brand" href="/ads">Adlister</a>
-        </div>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="/about">About Us</a></li>
+            <li><a href="/about"><span class ="glyphicon glyphicon-heart-empty"></span> About Us</a></li>
         </ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
