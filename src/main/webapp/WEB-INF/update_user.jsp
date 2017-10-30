@@ -11,7 +11,7 @@
 
 <div class="container">
     <div class="form">
-        <h1>Please fill in your information</h1>
+        <h1>Please Update your information</h1>
         <form action="/updateuser" method="post">
             <div class="form-group">
                 <label for="username">Username</label>

@@ -1,0 +1,35 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <jsp:include page="/WEB-INF/partials/head.jsp">
+        <jsp:param name="title" value="Create a new Ad" />
+    </jsp:include>
+</head>
+<body>
+<jsp:include page="/WEB-INF/partials/navbarCreate.jsp"/>
+<div class="container">
+    <h1 class="title-text">Update your Ad</h1>
+    <form action="/ads/updateAd" method="post" class="form">
+        <div class="form-group">
+            <input type="hidden" name="id" value="${ad.id}">
+            <label for="title">Title</label>
+            <input id="title" name="title" class="form-control" type="text">
+        </div>
+        <label for="category">Choose a category</label>
+        <select id="category" name="category" class="form-control">
+
+            <option>Weak Dabs</option>
+            <option>Basic Dabs</option>
+            <option>Fire Dabs</option>
+            <option>God Dabs</option>
+        </select>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" class="form-control" type="text"></textarea>
+        </div>
+        <input type="submit" class="btn btn-block btn-primary">
+    </form>
+</div>
+</body>
+</html>
