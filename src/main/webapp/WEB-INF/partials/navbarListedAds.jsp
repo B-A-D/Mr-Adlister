@@ -6,9 +6,9 @@
         </div>
         <jsp:include page="navSearchTemplate.jsp"/>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="/profile">Profile</a></li>
-            <li><a href="/ads/create">Create an Ad</a></li>
-            <li><a href="/logout">Logout</a></li>
+            <li><a href="/profile"><span class ="glyphicon glyphicon-user"></span> Profile</a></li>
+            <li><a href="/ads/create"><span class ="glyphicon glyphicon-pencil"></span> Create an Ad</a></li>
+            <li><a href="/logout"><span class ="glyphicon glyphicon-off"></span> Logout</a></li>
         </ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
