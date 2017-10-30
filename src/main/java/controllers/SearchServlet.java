@@ -1,10 +1,31 @@
-@javax.servlet.annotation.WebServlet(name = "SearchServlet")
-public class SearchServlet extends javax.servlet.http.HttpServlet {
-    protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, java.io.IOException {
+package controllers;
 
+import Dao.DaoFactory;
+import models.Ad;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+@WebServlet(name = "SearchServlet", urlPatterns="/ads/search")
+public class SearchServlet extends HttpServlet {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
 
-    protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, java.io.IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String searchTerm = (request.getParameter("search")!=null) ? request.getParameter("search") : "";
+        String username = request.getParameter("username")!=null ? request.getParameter("username"):"";
+        String category =request.getParameter("category");
+
+        List<Ad> ads = DaoFactory.getAdsDao().search(searchTerm, username, category);
+
+        request.setAttribute("ads", ads);
+        request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request,response);
 
     }
 }

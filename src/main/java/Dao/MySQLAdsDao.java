@@ -86,17 +86,74 @@ public class MySQLAdsDao implements Ads {
         return ads;
     }
 
-    public List<Ad> search(String searchTerm) {
+    public List<Ad> search(String searchTerm, String username, String category) {
         try {
             PreparedStatement stmt = null;
-            String query = "Select * from ads WHERE title LIKE ? OR description LIKE ?";
+            String query = "Select * from ads WHERE 1=1 ";
+
+            if(!searchTerm.isEmpty()){
+                query+="AND (title LIKE ? OR description LIKE ? ) ";
+
+            }
+            if(!category.equals("0")){
+                query+= "AND (category=? ) ";
+
+            }
+            if(!username.isEmpty()){
+                query+="AND (user_id = (select id from users where username=?) )";
+            }
+
+            System.out.println(query);
+
             stmt = connection.prepareStatement(query);
-            stmt.setString(1, "%" + searchTerm + "%");
-            stmt.setString(2, "%" + searchTerm + "%");
+
+            //Checks cases to see if there are parameters in the search field
+
+            //Checks all parameters
+            if(!searchTerm.isEmpty() && !category.equals("0") && !username.isEmpty()){
+                stmt.setString(1, "%" + searchTerm + "%");
+                stmt.setString(2, "%" + searchTerm + "%");
+                stmt.setString(3, category);
+                stmt.setString(4, username);
+            }
+            //Search Term and category
+            else if(!searchTerm.isEmpty() && !category.equals("0")){
+                stmt.setString(1, "%" + searchTerm + "%");
+                stmt.setString(2, "%" + searchTerm + "%");
+                stmt.setString(3, category);
+            }
+            //Search Term and Username
+            else if(!searchTerm.isEmpty() && !username.isEmpty()){
+                System.out.println("Search Term and Username");
+                stmt.setString(1, "%" + searchTerm + "%");
+                stmt.setString(2, "%" + searchTerm + "%");
+                stmt.setString(3, username);
+            }
+            //Username and Category
+            else if(!username.isEmpty() && !category.equals("0")){
+                stmt.setString(1, category);
+                stmt.setString(2, username);
+            }
+            //Search Term
+            else if(!searchTerm.isEmpty()){
+                stmt.setString(1, "%" + searchTerm + "%");
+                stmt.setString(2, "%" + searchTerm + "%");
+            }
+            //Username
+            else if(!username.isEmpty()){
+                System.out.println("username not empty");
+                stmt.setString( 1, username);
+
+            }
+            //Category
+            else if(!category.equals("0")){
+                stmt.setString(1, category);
+            }
+
             ResultSet rs = stmt.executeQuery();
             return createAdsFromResults(rs);
         } catch (SQLException e) {
-            throw new RuntimeException("Error searching Ads");
+            throw new RuntimeException("Error searching Ads "+ e.getMessage());
         }
     }
 
@@ -111,7 +168,7 @@ public class MySQLAdsDao implements Ads {
             ResultSet rs=stmt.executeQuery();
             return createAdsFromResults(rs);
         } catch (SQLException e) {
-            throw new RuntimeException("Error retrieving ads by categories",e);
+            throw new RuntimeException("Error retrieving ads by categories");
         }
 
     }

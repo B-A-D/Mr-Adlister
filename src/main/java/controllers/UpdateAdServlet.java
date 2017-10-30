@@ -31,7 +31,7 @@ public class UpdateAdServlet extends HttpServlet {
         ad.setDescription(description);
         ad.setCategory(category);
         DaoFactory.getAdsDao().update(ad);
-        response.sendRedirect("/profile");
+        response.sendRedirect("/../profile");
 
     }
 
