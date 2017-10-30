@@ -6,10 +6,13 @@
         </div>
         <jsp:include page="navSearchTemplate.jsp"/>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="/logout">Logout</a></li>
-            <li><a href="/ads">All Ads</a></li>
-            <li><a href="ads/create">Create an ad</a></li>
-            <li><a href="/about">About Us</a></li>
+            <li><a href="/ads"><span class="glyphicon glyphicon-tags"></span> All Ads </a></li>
+            <li><a href="ads/create"><span class="glyphicon glyphicon-pencil"></span> Create an ad </a></li>
+            <li><a href="/updateuser"><span class ="glyphicon glyphicon-wrench"></span> Update user</a></li>
+            <li><a href="/about"><span class="glyphicon glyphicon-heart-empty"></span> About Us</a></li>
+            <li><a href="/logout"><span class="glyphicon glyphicon-off"></span>
+                Logout </a></li>
+
         </ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

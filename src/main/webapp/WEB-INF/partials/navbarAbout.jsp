@@ -7,9 +7,9 @@
         </div>
         <jsp:include page="navSearchTemplate.jsp"/>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="/login">Login</a></li>
-            <li><a href="/logout">Register</a></li>
-            <li><a href="/login">Profile</a></li>
+            <li><a href="/login"><span class ="glyphicon glyphicon-triangle-right"></span> Login</a></li>
+            <li><a href="/logout"><span class ="glyphicon glyphicon-globe"></span> Register</a></li>
+            <li><a href="/login"><span class ="glyphicon glyphicon-user"></span> Profile</a></li>
 ≠
         </ul>
     </div><!-- /.navbar-collapse -->
