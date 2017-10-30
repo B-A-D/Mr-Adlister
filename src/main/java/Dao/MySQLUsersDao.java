@@ -54,6 +54,40 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+    @Override
+    public Long update(User user) {
+        String query = "UPDATE users SET username=?, email=?, password=? where id=?";
+        try{
+            PreparedStatement stmt=connection.prepareStatement(query);
+            stmt.setString(1,user.getUsername());
+            stmt.setString(2,user.getEmail());
+            stmt.setString(3, user.getPassword());
+            stmt.setLong(4,user.getId());
+            stmt.executeUpdate();
+            return 0L;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error updating user info",e);
+        }
+    }
+
+    //Function gets userId from the user based on username.
+//    @Override
+//    public Long userId(String username) {
+//        String query = "SELECT id FROM users WHERE username=?";
+//        try {
+//            PreparedStatement stmt = connection.prepareStatement(query);
+//            stmt.setString(1, username);
+//            ResultSet rs = stmt.executeQuery();
+//            while(rs.next()){
+//                return rs.getLong("id");
+//            }
+//        } catch (SQLException e) {
+//
+//            throw new RuntimeException("There was an error retrieving the ID " + e.getMessage());
+//        }
+//
+//    }
+
     private User extractUser(ResultSet rs) throws SQLException {
         if (!rs.next()) {
             return null;
