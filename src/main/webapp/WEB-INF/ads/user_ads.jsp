@@ -10,20 +10,25 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Viewing user Ads" />
+        <jsp:param name="title" value="Viewing user Ads"/>
     </jsp:include>
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbarListedAds.jsp"/>
 <div class="container">
-    <h1>Here are all your ads ${sessionScope.user.username}</h1>
-    <c:forEach var="ad" items="${ads}">
-        <div class="col-md-3">
-            <a href="/ads/id?id=${ad.id}">${ad.title}</a>
-            <p>${ad.description}</p>
-        </div>
-    </c:forEach>
-
+    <div class="main-display">
+    <h1 class="title-text">Here are all your ads ${sessionScope.user.username}</h1>
+    <div class="row">
+        <c:forEach var="ad" items="${ads}">
+            <div class="col-xs-3">
+                <div class="ads">
+                    <a href="/ads/id?id=${ad.id}">${ad.title}</a>
+                    <p>${ad.description}</p>
+                </div>
+            </div>
+        </c:forEach>
+    </div>
+    </div>
 </div>
 
 </body>

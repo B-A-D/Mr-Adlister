@@ -11,15 +11,15 @@
 
 <div class="container">
     <div class="main-display">
-        <h1>Welcome ${sessionScope.user.username}, here are all your currently listed Ads!</h1>
+        <h1 class="title-text">Welcome ${sessionScope.user.username}, here are all your currently listed Ads!</h1>
         <div class="row">
             <c:forEach var="ad" items="${ads}">
                 <div class="col-md-3">
                     <div class="ads">
-                        <a href="/ads/id?id=${ad.id}"><h2>${ad.title}</h2></a>
+                        <a class="purple-text" href="/ads/id?id=${ad.id}"><h2>${ad.title}</h2></a>
                             <%--Replace the '#' with the servlet link to search based on id.--%>
-                        <p>${ad.description}</p>
-                        <a href="/delete?id=${ad.id}">
+                        <p class="purple-text">${ad.description}</p>
+                        <a class="purple-text" href="/delete?id=${ad.id}">
                             Delete Ad
                         </a>
                     </div>
