@@ -70,6 +70,18 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+    public void updateEmail (String email, Long id){
+        String query = "UPDATE users SET email=? WHERE id=?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, email);
+            stmt.setLong(2, id);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     //Function gets userId from the user based on username.
 //    @Override
 //    public Long userId(String username) {
