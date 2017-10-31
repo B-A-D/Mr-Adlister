@@ -32,7 +32,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-6 col-xs-offset-3">
-            <input type="submit" class="login-btn btn btn-primary">
+            <input type="submit" class="login-btn btn">
                 </div>
             </div>
         </form>

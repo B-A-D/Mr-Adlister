@@ -11,14 +11,14 @@
 <div class="container">
     <div class="main-display">
         <div class="row">
-            <h1>Here are all the ads!</h1>
+            <h1 class="title-text">Here are all the ads!</h1>
             <c:forEach var="ad" items="${ads}">
                 <div class="col-md-3">
                     <div class="ads">
-                        <a href="/ads/id?id=${ad.id}">
+                        <a class="purple-text" href="/ads/id?id=${ad.id}">
                             <h2>${ad.title}</h2>
                         </a>
-                        <p>${ad.description}</p>
+                        <p class="purple-text">${ad.description}</p>
                     </div>
                 </div>
             </c:forEach>
