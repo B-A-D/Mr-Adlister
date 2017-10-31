@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
@@ -18,10 +19,11 @@
                     <div class="ads">
                         <a class="purple-text" href="/ads/id?id=${ad.id}"><h2>${ad.title}</h2></a>
                             <%--Replace the '#' with the servlet link to search based on id.--%>
-                        <p class="purple-text">${ad.description}</p>
-                        <a class="purple-text" href="/delete?id=${ad.id}">
-                            Delete Ad
+                        <p>${ad.description}</p>
+                        <a class="glyphicon glyphicon-trash" href="/delete?id=${ad.id}">Delete
                         </a>
+                        <a class="glyphicon glyphicon-edit" href="/ads/updateAd?id=${ad.id}">Edit
+
                     </div>
                 </div>
             </c:forEach>

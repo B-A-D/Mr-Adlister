@@ -9,14 +9,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "Controllers.SearchServlet", urlPatterns = "/ads/search")
+@WebServlet(name = "SearchServlet", urlPatterns="/ads/search")
 public class SearchServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String searchTerm = request.getParameter("search");
-        List<Ad> ads = DaoFactory.getAdsDao().search(searchTerm);
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String searchTerm = (request.getParameter("search")!=null) ? request.getParameter("search") : "";
+        String username = request.getParameter("username")!=null ? request.getParameter("username"):"";
+        String category =request.getParameter("category");
+
+        List<Ad> ads = DaoFactory.getAdsDao().search(searchTerm, username, category);
+
         request.setAttribute("ads", ads);
-        request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request,response);
+
     }
 }

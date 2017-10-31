@@ -58,8 +58,10 @@ public class UpdateServlet extends HttpServlet {
                 return;
             }
 
+
             int numberOfRounds = 12;
             String hash = BCrypt.hashpw(password, BCrypt.gensalt(numberOfRounds));
+
 
             User user = new User(loggedinUser.getId(), username, hash, email);
             DaoFactory.getUsersDao().update(user);

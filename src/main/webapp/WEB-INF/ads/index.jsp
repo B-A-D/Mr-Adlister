@@ -15,7 +15,9 @@
             <c:forEach var="ad" items="${ads}">
                 <div class="col-md-3">
                     <div class="ads">
-                        <a class="purple-text" href="/ads/id?id=${ad.id}"><h2>${ad.title}</h2></a>
+                        <a class="purple-text" href="/ads/id?id=${ad.id}">
+                            <h2>${ad.title}</h2>
+                        </a>
                         <p class="purple-text">${ad.description}</p>
                     </div>
                 </div>
