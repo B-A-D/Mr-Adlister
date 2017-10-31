@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="/index.jsp">DabLister</a>
+            <a class="navbar-brand" href="/index.jsp">Dab-Lister</a>
         </div>
         <jsp:include page="navSearchTemplate.jsp"/>
         <ul class="nav navbar-nav navbar-right">

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/index.jsp">DabLister</a>
+            <a class="navbar-brand" href="/index.jsp">Dab-Lister</a>
         </div>
         <!--navbar search-->
         <jsp:include page="navSearchTemplate.jsp"/>
