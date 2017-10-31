@@ -3,7 +3,7 @@ package controllers;
 import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 import Dao.DaoFactory;
 import models.User;
-
+import org.mindrot.jbcrypt.BCrypt;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,7 +18,7 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("/profile");
             return;
         }
-        request.getRequestDispatcher("/WEB-INF//login.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -29,10 +29,11 @@ public class LoginServlet extends HttpServlet {
 
         if (user == null){
             request.setAttribute("nouser", "Sorry, that username doesn't exist");
-            request.getRequestDispatcher("/WEB-INF//login.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
             return;
         }
-        boolean validAttempt = password.equals(user.getPassword());
+        String hash = user.getPassword();
+        boolean validAttempt = BCrypt.checkpw(password, hash);
 
         if (validAttempt) {
             request.getSession().setAttribute("user", user);
@@ -40,7 +41,7 @@ public class LoginServlet extends HttpServlet {
         } else {
             request.setAttribute("error", "Incorrect Password! Please try again");
             request.setAttribute("username", username);
-            request.getRequestDispatcher("/WEB-INF//login.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
             return;
         }
     }

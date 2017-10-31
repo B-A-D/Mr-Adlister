@@ -18,7 +18,6 @@ public class SearchByUsernameServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int votes = 0;
 //        User user= (User) request.getSession().getAttribute("user");
         String username = request.getParameter("username");
 //        User user=DaoFactory.getUsersDao().findbyUsername(username);
