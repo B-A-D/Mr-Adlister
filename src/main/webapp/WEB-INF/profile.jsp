@@ -20,9 +20,9 @@
                         <a class="purple-text" href="/ads/id?id=${ad.id}"><h2>${ad.title}</h2></a>
                             <%--Replace the '#' with the servlet link to search based on id.--%>
                         <p>${ad.description}</p>
-                        <a class="glyphicon glyphicon-trash" href="/delete?id=${ad.id}">Delete
+                        <a class="purple-text glyphicon glyphicon-trash" href="/delete?id=${ad.id}">Delete
                         </a>
-                        <a class="glyphicon glyphicon-edit" href="/ads/updateAd?id=${ad.id}">Edit</a>
+                        <a class="purple-text glyphicon glyphicon-edit" href="/ads/updateAd?id=${ad.id}">Edit</a>
                     </div>
                 </div>
             </c:forEach>
