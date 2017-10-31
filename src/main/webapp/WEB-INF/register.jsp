@@ -48,14 +48,20 @@
             </div>
             <div class="row">
                 <div class="col-xs-6 col-xs-offset-3">
-                    <input type="submit" class="login-btn btn">
+                    <button role="button" class="login-btn btn">Register</button>
                 </div>
             </div>
-            <div class="row">
-            <h1 class="signup">Already Registered?</h1>
-            <button type="button" class="register-btn btn btn-success btn-lg center-block"><a href="/login"> Login</a></button>
-        </div>
         </form>
+            <form action="login">
+                <div class="row">
+                    <h1 class="signup">Already a Member?</h1>
+                    <button role="button" class="register-btn btn btn-success btn-lg center-block">
+                        Login
+                    </button>
+                </div>
+            </form>
+
+
     </div>
 </div>
 

@@ -32,14 +32,16 @@
             </div>
             <div class="row">
                 <div class="col-xs-6 col-xs-offset-3">
-            <input type="submit" class="login-btn btn">
+            <button role="button" class="login-btn btn">Login</button>
                 </div>
             </div>
         </form>
     </div>
+    <form action="register">
     <div class="register-here">
     <h1 class="signup">Not a Member? Sign Up!</h1>
-    <button type="button" class="register-btn btn btn-Success btn-lg center-block"><a href="/register"> Register</a></button>
+        <button role="button" class="register-btn btn btn-Success btn-lg center-block"> Register</button>
+    </div></form>
 </div>
 </div>
 </body>
