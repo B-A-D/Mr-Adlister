@@ -9,7 +9,7 @@
     </div>
 
     <select id="category" name="category" class="form-control">
-        <option value="0">Pick an option!</option>
+        <option value="0">All Dabs</option>
         <option value="Weak Dabs">Weak Dabs</option>
         <option value="Basic Dabs">Basic Dabs</option>
         <option value="Fire Dabs">Fire Dabs</option>

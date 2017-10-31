@@ -15,17 +15,18 @@
     <%--<c:when test="${ad.id} eq <%= request.getParameter("id") %>">--%>
     <div class="main-display">
         <div class="row">
-        <div class="col-md-4 col-md-offset-4 ads">
-            <h1>${ad.title}</h1>
-            <p>${ad.description}</p>
-            <p>${ad.date_time}</p>
-        </div>
+            <div class="col-md-4 col-md-offset-4 ads">
+                <h1>${ad.title}</h1>
+                <p>${ad.description}</p>
+                <p class="createdDate">${ad.date_time}</p>
+            </div>
         </div>
     </div>
 
     <%--</c:when>--%>
     <%--</c:forEach>--%>
 </div>
-</div>
+<jsp:include page="/WEB-INF/partials/scripts.jsp" />
+
 </body>
 </html>

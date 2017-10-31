@@ -19,12 +19,14 @@
                             <h2>${ad.title}</h2>
                         </a>
                         <p class="purple-text">${ad.description}</p>
+                        <p class="createdDate">${ad.date_time}</p>
                     </div>
                 </div>
             </c:forEach>
         </div>
     </div>
 </div>
+<jsp:include page="/WEB-INF/partials/scripts.jsp" />
 
 </body>
 </html>
