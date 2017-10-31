@@ -74,7 +74,7 @@ body {
     background-color: goldenrod;
     padding: 10px;
     border: 1px solid black;
-    /*width: 95%;*/
+    min-height: 190px;
 }
 
 .about{

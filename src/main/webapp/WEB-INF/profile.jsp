@@ -22,8 +22,7 @@
                         <p>${ad.description}</p>
                         <a class="glyphicon glyphicon-trash" href="/delete?id=${ad.id}">Delete
                         </a>
-                        <a class="glyphicon glyphicon-edit" href="/ads/updateAd?id=${ad.id}">Edit
-
+                        <a class="glyphicon glyphicon-edit" href="/ads/updateAd?id=${ad.id}">Edit</a>
                     </div>
                 </div>
             </c:forEach>
