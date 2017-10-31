@@ -51,8 +51,13 @@
                     <input type="submit" class="login-btn btn">
                 </div>
             </div>
+            <div class="row">
+            <h1 class="signup">Already Registered?</h1>
+            <button type="button" class="register-btn btn btn-success btn-lg center-block"><a href="/login"> Login</a></button>
+        </div>
         </form>
     </div>
 </div>
+
 </body>
 </html>
