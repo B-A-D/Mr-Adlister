@@ -95,3 +95,7 @@ body {
 a.purple-text {
     color: rebeccapurple;
 }
+.image_box{
+    width:auto;
+    height:auto;
+}

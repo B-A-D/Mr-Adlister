@@ -5,6 +5,8 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Ads"/>
     </jsp:include>
+    <script src="https://www.google.com/jsapi"></script>
+    <script src="../../js/image-generator.js"></script>"
 </head>
 <body>
 
@@ -16,6 +18,9 @@
     <div class="main-display">
         <div class="row">
             <div class="col-md-4 col-md-offset-4 ads">
+                <div class="image_box">
+
+                </div>
                 <h1>${ad.title}</h1>
                 <p>${ad.description}</p>
                 <p class="createdDate">${ad.date_time}</p>
