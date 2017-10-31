@@ -91,3 +91,7 @@ body {
     text-align: center;
     color: lightgrey;
 }
+
+a.purple-text {
+    color: rebeccapurple;
+}
