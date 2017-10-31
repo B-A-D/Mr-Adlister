@@ -16,57 +16,34 @@ import java.util.HashMap;
 public class UpdateServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException,
             IOException {
-        request.getRequestDispatcher("/WEB-INF/update_user.jsp").forward(request, response);
+        if (request.getSession().getAttribute("user") != null) {
+            User user = (User) request.getSession().getAttribute("user");
+            User user2 = DaoFactory.getUsersDao().findbyUsername(user.getUsername());
+            String email = user2.getEmail();
+            request.setAttribute("email", email);
+            request.getRequestDispatcher("/WEB-INF/update_user.jsp").forward(request, response);
+        } else {
+            request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+        }
     }
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            User loggedinUser = (User) request.getSession().getAttribute("user");
-            String username = request.getParameter("username").trim();
+
             String email = request.getParameter("email").trim();
-            String password = request.getParameter("password").trim();
-            String passwordConfirmation = request.getParameter("confirm_password");
 
-            boolean InputHasErrors =
-                    username.isEmpty()
-                            || email.isEmpty()
-                            || password.isEmpty()
-                            || !passwordConfirmation.equals(password);
-
-            HashMap<String, String> Errors = new HashMap<>();
-            if (username.isEmpty()) {
-                Errors.put("username", "Username field cannot be empty!");
-            } else {
-                request.setAttribute("username", username);
-            }
-            if (email.isEmpty()) {
-                Errors.put("email", "Email field cannot be empty!");
-            } else {
-                request.setAttribute("email", email);
-            }
-            if (password.isEmpty()) {
-                Errors.put("password", "Password field cannot be empty!");
-            }
-            if (!passwordConfirmation.equals(password)) {
-                Errors.put("password_confirm", "Passwords must match!");
-            }
-
-            request.setAttribute("Errors", Errors);
+            boolean InputHasErrors = email.isEmpty();
 
             if (InputHasErrors) {
+                request.setAttribute("error", "Email cannot be empty");
                 request.getRequestDispatcher("/WEB-INF/update_user.jsp").forward(request, response);
                 return;
             }
 
-
-            int numberOfRounds = 12;
-            String hash = BCrypt.hashpw(password, BCrypt.gensalt(numberOfRounds));
-
-
-            User user = new User(loggedinUser.getId(), username, hash, email);
-            DaoFactory.getUsersDao().update(user);
-
-            request.getSession().setAttribute("user", user);
+            // get a user object
+        User user = (User)request.getSession().getAttribute("user");
+            Long userID = user.getId();
+            DaoFactory.getUsersDao().updateEmail(email, userID);
             response.sendRedirect("/profile");
         }
 }
