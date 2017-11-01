@@ -21,6 +21,13 @@
                             ${error}
                     </p>
                 </c:if>
+                <label for="confirm-email">Confirm Email</label>
+                <input id="confirm-email" name="confirm-email" class="form-control">
+                <c:if test="${error2 != null}">
+                    <p class="error">
+                            ${error2}
+                    </p>
+                </c:if>
             </div>
             <div class="row">
                 <div class="col-xs-6 col-xs-offset-3">
