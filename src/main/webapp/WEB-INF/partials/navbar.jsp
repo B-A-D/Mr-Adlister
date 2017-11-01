@@ -8,25 +8,28 @@
         <jsp:include page="catSearch.jsp"/>
 
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="/ads"><span class="glyphicon glyphicon-tags"></span> All Ads </a></li>
+            <li><a class="custom-a" href="/ads"><span class="glyphicon glyphicon-tags"></span> All Ads </a></li>
 
 
             <c:choose>
                 <c:when test="${(sessionScope.user!=null)}">
-                    <li><a href="ads/create"><span class="glyphicon glyphicon-pencil"></span> Create an ad </a></li>
-                    <li><a href="/updateuser"><span class="glyphicon glyphicon-wrench"></span> Update Email</a></li>
-                    <li><a href="/logout"><span class="glyphicon glyphicon-off"></span>
+                    <li><a class="custom-a" href="ads/create">Create an ad
+                    </a></li>
+                    <li><a class="custom-a" href="/updateuser"></span>Update Email
+                    </a></li>
+                    <li><a class="custom-a" href="/profile"><span class="glyphicon glyphicon-user"></span>Profile</a></li>
+                    <li><a class="custom-a" href="/logout"><span class="glyphicon glyphicon-off"></span>
                         Logout </a></li>
                 </c:when>
 
                 <c:otherwise>
-                    <li><a href="/login"><span class="glyphicon glyphicon-triangle-right"></span> Login</a></li>
-                    <li><a href="/logout"><span class="glyphicon glyphicon-globe"></span> Register</a></li>
+                    <li><a class="custom-a" href="/login"><span class="glyphicon glyphicon-triangle-right"></span> Login</a></li>
+                    <li><a class="custom-a" href="/logout"><span class="glyphicon glyphicon-globe"></span> Register</a></li>
                 </c:otherwise>
 
             </c:choose>
 
-            <li><a href="/about"><span class="glyphicon glyphicon-heart-empty"></span> About Us</a></li>
+            <li><a class="custom-a" href="/about"><span class="glyphicon glyphicon-heart-empty"></span> About Us</a></li>
 
 
         </ul>

@@ -95,3 +95,7 @@ a.purple-text {
     width:auto;
     height:auto;
 }
+
+.custom-a {
+    padding: 15px 10px !important;
+}
