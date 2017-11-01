@@ -19,6 +19,8 @@
                     <div class="ads">
                         <a class="purple-text" href="/ads/id?id=${ad.id}"><h2>${ad.title}</h2></a>
                             <%--Replace the '#' with the servlet link to search based on id.--%>
+                        <p class="purple-text">Category: ${ad.category}</p>
+
                         <p>${ad.description}</p>
                         <span class="delete"><a class="purple-text glyphicon glyphicon-trash" href="/delete?id=${ad.id}">Delete
                         </a></span>

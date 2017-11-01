@@ -22,6 +22,7 @@
             <div class="col-md-4 col-md-offset-4 ads">
                 <h1>${ad.title}</h1>
                 <p>${ad.description}</p>
+                <p class="purple-text">Category: ${ad.category}</p>
                 <p class="createdDate">${ad.date_time}</p>
             </div>
         </div>
