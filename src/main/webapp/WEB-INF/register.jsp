@@ -22,7 +22,7 @@
                     </p>
                 </c:if>
                 <c:if test="${Errors.containsKey('username')}">
-                    <p class="error"> ${Errors.get('username')}</p>
+                    <p class="error">${Errors.get('username')}</p>
                 </c:if>
             </div>
             <div class="form-group">
@@ -36,7 +36,7 @@
                 <label for="password">Password</label>
                 <input id="password" name="password" class="form-control" type="password">
                 <c:if test="${Errors.containsKey('password')}">
-                    <p class="error"> ${Errors.get('password')}</p>
+                    <p class="error">${Errors.get('password')}</p>
                 </c:if>
             </div>
             <div class="form-group">
