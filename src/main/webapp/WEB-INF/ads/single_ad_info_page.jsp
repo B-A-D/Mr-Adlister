@@ -36,7 +36,6 @@
     <%--</c:forEach>--%>
 </div>
 <jsp:include page="/WEB-INF/partials/scripts.jsp" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="../../js/image-generator.js"></script>
 </body>
 </html>

@@ -32,7 +32,7 @@
 
         <div class="form-group">
             <label for="description">Description</label>
-            <textarea id="description" name="description" class="form-control" type="text"></textarea>
+            <textarea id="description" name="description" class="form-control" type="text">${desscription}</textarea>
 <c:if test="${Errors.containsKey('description')}">
     <p class="error"> ${Errors.get('description')}</p>
 </c:if>
