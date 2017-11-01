@@ -2,7 +2,7 @@
 .container {
     min-height: 100%;
     text-align: center;
-    color:papayawhip;
+    color: papayawhip;
 }
 
 .form {
@@ -10,7 +10,7 @@
     text-align: left;
     padding: 10px;
     background: rgba(60, 60, 60, 0.4);
-    color:papayawhip;
+    color: papayawhip;
 }
 
 body {
@@ -26,7 +26,7 @@ body {
     text-align: center;
     padding: 25px 50px;
     background: rgba(60, 60, 60, 0.4);
-    color:papayawhip;
+    color: papayawhip;
 }
 
 .custom-btn {
@@ -54,16 +54,14 @@ body {
     font-size: 4em;
 }
 
-.error{
-     color:red;
+.error {
+    color: red;
 }
 
-.signup{
-    color:papayawhip;
+.signup {
+    color: papayawhip;
     text-align: center;
 }
-
-
 
 .ads {
     margin-top: 20px;
@@ -74,17 +72,18 @@ body {
     min-height: 190px;
 }
 
-.about{
+.about {
     margin-top: 20px;
-    font-size:1em;
-    background-color:lightsalmon;
-    padding:10px;
+    font-size: 1em;
+    background-color: lightsalmon;
+    padding: 10px;
     border: 1px solid black;
     text-align: center;
-    color:rebeccapurple;
-    line-height:1em;
+    color: rebeccapurple;
+    line-height: 1em;
 }
-.footer{
+
+.footer {
     text-align: center;
     color: lightgrey;
 }
