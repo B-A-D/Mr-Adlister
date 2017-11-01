@@ -31,11 +31,22 @@ public class UpdateServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
             String email = request.getParameter("email").trim();
+            String confirmEmail = request.getParameter("confirm-email").trim();
 
-            boolean InputHasErrors = email.isEmpty();
+            boolean emptyEmail = email.isEmpty();
+            boolean doesntMatch = !email.equals(confirmEmail);
 
-            if (InputHasErrors) {
+            if (emptyEmail) {
                 request.setAttribute("error", "Email cannot be empty");
+                request.getRequestDispatcher("/WEB-INF/update_user.jsp").forward(request, response);
+                return;
+            }
+            if (doesntMatch) {
+                request.setAttribute("error2", "Emails must match");
+                User user = (User) request.getSession().getAttribute("user");
+                User user2 = DaoFactory.getUsersDao().findbyUsername(user.getUsername());
+                String email2 = user2.getEmail();
+                request.setAttribute("email", email2);
                 request.getRequestDispatcher("/WEB-INF/update_user.jsp").forward(request, response);
                 return;
             }
