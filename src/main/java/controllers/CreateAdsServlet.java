@@ -58,7 +58,6 @@ public class CreateAdsServlet extends HttpServlet {
             request.getRequestDispatcher("/WEB-INF/ads/create.jsp").forward(request, response);
             return;
         }
-
         User user= (User) request.getSession().getAttribute("user");
         Ad ad = new Ad(user.getId(),title,description,category);
         DaoFactory.getAdsDao().insert(ad);
