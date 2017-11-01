@@ -112,3 +112,9 @@ a.purple-text {
 .custom-a {
     padding: 15px 10px !important;
 }
+ img{
+margin-left: auto;
+     margin-right: auto;
+     display: block;
+     padding-top: 20px;
+ }

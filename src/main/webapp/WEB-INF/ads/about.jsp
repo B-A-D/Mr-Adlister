@@ -14,5 +14,12 @@
     Got a dab you want to share with the world? Create an ad here and sell it to your fellow dab enthusiasts! Dabs on Dabs!
     So come on down to Dab-lister! Where we will find your perfect dab match, or your life back guaranteed!!!</h3>
 </div>
+<div>
+    <img src="/img/MrAdlister.jpg" alt="group photo">
+</div>
 </body>
+<footer>
+    <div class="footer"><p> All rights reserved by B-A-D productions <span class="glyphicon glyphicon-thumbs-up"></span>
+    </p></div>
+</footer>
 </html>
