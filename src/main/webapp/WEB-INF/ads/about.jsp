@@ -6,7 +6,7 @@
     </jsp:include>
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/navbarAbout.jsp"/>
+<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="about">
 <h1 class="title-text">Hello</h1>
 <h3>Welcome to Dab Lister, the Dab Emporium! Unlock mediocre to God-level dabs for yourself, or as a gift for that special someone in your life!

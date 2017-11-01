@@ -11,7 +11,7 @@
 <body>
 
 
-<jsp:include page="/WEB-INF/partials/navbarListedAds.jsp"/>
+<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="container">
     <%--<c:forEach var="ad" items="${ads}">--%>
     <%--<c:when test="${ad.id} eq <%= request.getParameter("id") %>">--%>

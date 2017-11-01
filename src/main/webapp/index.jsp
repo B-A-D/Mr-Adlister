@@ -13,7 +13,7 @@
     </jsp:include>
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/navbarRegister.jsp"/>
+<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="container">
     <div class="main-display">
         <h2 class="title-text"> WELCOME TO THE DAB-LISTER</h2>
