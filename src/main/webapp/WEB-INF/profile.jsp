@@ -8,7 +8,7 @@
     </jsp:include>
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/navbarProfile.jsp"/>
+<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
 <div class="container">
     <div class="main-display">

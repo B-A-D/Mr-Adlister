@@ -7,7 +7,7 @@
     </jsp:include>
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/navbarListedAds.jsp"/>
+<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="container">
     <div class="main-display">
         <div class="row">

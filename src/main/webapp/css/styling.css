@@ -108,3 +108,7 @@ a.purple-text {
 .button_color{
     color:papayawhip;
 }
+
+.custom-a {
+    padding: 15px 10px !important;
+}

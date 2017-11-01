@@ -7,7 +7,7 @@
     </jsp:include>
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/navbarRegister.jsp"/>
+<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
 <div class="container">
     <div class="form">
@@ -48,7 +48,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-6 col-xs-offset-3">
-                    <button role="button" class="login-btn btn">Register</button>
+                    <button role="button" class="login-btn btn btn-primary">Register</button>
                 </div>
             </div>
         </form>

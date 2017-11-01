@@ -14,7 +14,7 @@
     </jsp:include>
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/navbarListedAds.jsp"/>
+<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="container">
     <div class="main-display">
     <h1 class="title-text">Here are all your ads ${sessionScope.user.username}</h1>
