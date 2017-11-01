@@ -10,7 +10,7 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="container">
     <h1 class="title-text">Create a New Ad</h1>
-    <form action="/ads/create" method="post" class="form">
+    <form action="/create" method="post" class="form">
         <div class="form-group">
             <label for="title">Title</label>
             <input id="title" name="title" class="form-control" type="text" value="${title}">
