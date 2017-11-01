@@ -13,7 +13,7 @@
 
             <c:choose>
                 <c:when test="${(sessionScope.user!=null)}">
-                    <li><a class="custom-a" href="ads/create">Create an ad
+                    <li><a class="custom-a" href="/create">Create an ad
                     </a></li>
                     <li><a class="custom-a" href="/updateuser"></span>Update Email
                     </a></li>

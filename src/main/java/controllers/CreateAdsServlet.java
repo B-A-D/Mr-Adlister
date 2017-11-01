@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
 
-@WebServlet(name = "Controllers.CreateAdsServlet", urlPatterns = "/ads/create")
+@WebServlet(name = "Controllers.CreateAdsServlet", urlPatterns = "/create")
 public class CreateAdsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getSession().getAttribute("user") != null) {
