@@ -24,7 +24,7 @@
 
                 <c:otherwise>
                     <li><a class="custom-a" href="/login"><span class="glyphicon glyphicon-triangle-right"></span> Login</a></li>
-                    <li><a class="custom-a" href="/logout"><span class="glyphicon glyphicon-globe"></span> Register</a></li>
+                    <li><a class="custom-a" href="/register"><span class="glyphicon glyphicon-globe"></span> Register</a></li>
                 </c:otherwise>
 
             </c:choose>

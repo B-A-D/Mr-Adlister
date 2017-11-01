@@ -48,7 +48,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-6 col-xs-offset-3">
-                    <button role="button" class="login-btn btn">Register</button>
+                    <button role="button" class="login-btn btn btn-primary">Register</button>
                 </div>
             </div>
         </form>
