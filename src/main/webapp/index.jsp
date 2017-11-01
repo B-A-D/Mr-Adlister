@@ -20,10 +20,10 @@
         <iframe src="https://giphy.com/embed/eOOcHWaaJnTwc" width="480" height="270" frameBorder="0" class="giphy-embed"
                 allowFullScreen></iframe>
         <p><a href="https://giphy.com/gifs/dab-dabbing-on-em-eOOcHWaaJnTwc"></a></p>
-        <form action="login">
+        <form action="/login" method="post">
             <button role="button" class=" btn btn-primary btn-lg center-block "> Login</button>
         </form>
-        <form action="register">
+        <form action="/register" method="post">
             <button role="button" class=" btn btn-Success btn-lg center-block "> Register</button>
         </form>
     </div>

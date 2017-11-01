@@ -1,6 +1,4 @@
 package controllers;
-
-import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 import Dao.DaoFactory;
 import models.User;
 import org.mindrot.jbcrypt.BCrypt;

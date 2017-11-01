@@ -32,7 +32,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-6 col-xs-offset-3">
-            <button role="button" class="login-btn btn">Login</button>
+            <button role="button" class="login-btn btn btn-primary">Login</button>
                 </div>
             </div>
         </form>
