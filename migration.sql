@@ -1,3 +1,4 @@
+CREATE DATABASE IF NOT EXISTS MrAdlister_db;
 use MrAdlister_db;
 DROP TABLE IF EXISTS ads;
 DROP TABLE IF EXISTS users;
